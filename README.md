@@ -43,7 +43,6 @@ devil binexec on
 
 pkg install python3
 pkg install py311-pip
-pip install playwright
 ``` 
 
 ### X11 within MrChrootBSD
