@@ -27,7 +27,6 @@ cd MrChrootBSD
 wget https://download.freebsd.org/releases/amd64/14.3-RELEASE/base.txz
 wget https://download.freebsd.org/releases/amd64/14.3-RELEASE/lib32.txz #Needed for gdb for some reason
 mkdir chroot
-cd ..
 cmake .
 make
 cp /etc/resolv.conf chroot/etc # networking
