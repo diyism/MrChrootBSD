@@ -24,8 +24,8 @@ This is early in development so stay tuned,use it like a normal chroot. Feel fre
 ```sh
 git clone https://github.com/nrootconauto/MrChrootBSD.git
 cd MrChrootBSD
-wget https://download.freebsd.org/releases/amd64/14.1-RELEASE/base.txz
-wget https://download.freebsd.org/releases/amd64/14.1-RELEASE/lib32.txz #Needed for gdb for some reason
+wget https://download.freebsd.org/releases/amd64/14.3-RELEASE/base.txz
+wget https://download.freebsd.org/releases/amd64/14.3-RELEASE/lib32.txz #Needed for gdb for some reason
 mkdir chroot
 cd ..
 cmake .
