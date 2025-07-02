@@ -34,6 +34,12 @@ cp /etc/resolv.conf chroot/etc # networking
 ./mrchroot -t lib32.txz chroot # Accounts for perms.db database
 ./mrchroot chroot /bin/sh
 # pkg etc
+
+#on serv00
+devil binexec on
+su
+pkg install bash
+chsh -s /usr/local/bin/bash
 ``` 
 
 ### X11 within MrChrootBSD
