@@ -35,7 +35,11 @@ cp /etc/resolv.conf chroot/etc # networking
 devil binexec on          #if on serv00
 ./mrchroot chroot /bin/sh
 pkg install bash
-chsh -s /usr/local/bin/bash
+
+#relogin
+cd MrChrootBSD
+devil binexec on
+./mrchroot chroot /usr/local/bin/bash
 ``` 
 
 ### X11 within MrChrootBSD
