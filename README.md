@@ -40,6 +40,10 @@ pkg install bash
 cd MrChrootBSD
 devil binexec on
 ./mrchroot chroot /usr/local/bin/bash
+
+pkg install python3
+pkg install py311-pip
+pip install playwright
 ``` 
 
 ### X11 within MrChrootBSD
