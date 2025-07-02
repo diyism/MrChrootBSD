@@ -46,7 +46,7 @@ pkg install py311-pip
 
 pkg install podman
 sysrc linux_enable=YES
-service linux start
+service linux start     #failed
 podman run --os=linux --volume /run/dbus:/run/dbus --security-opt apparmor=unconfined --cap-add=SYS_PTRACE -it ubuntu:latest /bin/bash
 ``` 
 
