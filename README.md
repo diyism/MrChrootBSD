@@ -30,7 +30,11 @@ service linux start     #failed
 podman run --os=linux --volume /run/dbus:/run/dbus --security-opt apparmor=unconfined --cap-add=SYS_PTRACE -it ubuntu:latest /bin/bash
 
 pkg install linux_base-c7
-#Cannot install package: kernel missing 64-bit Linux support        failed
+#Cannot install package: kernel missing 64-bit Linux support
+ls /boot/kernel/linux64.ko
+#No such file or directory                                         failed
+vm init
+#/usr/local/sbin/vm: ERROR: unable to load vmm.ko!                  failed
 curl -s https://raw.githubusercontent.com/apptainer/apptainer/main/tools/install-unprivileged.sh | bash -s - ./apptainer
 ``` 
 
