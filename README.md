@@ -1,23 +1,3 @@
-# MrChrootBSD
-  This program is a chroot like utility for FreeBSD,which is by far the most sexy BSD available. I like [PRoot](https://proot-me.github.io/) for testing software(on linux) but I am anaware of such a tool for FreeBSD,so I was left in the dust. Meet `MrChrootBSD`,a **non-root version of chroot** sort of.
-
-# NOTICE
-
-  **This software is still in it's infancy and should not be used for anything serious other than like educational stuff.**
-
-## Features
-  Here is a list
-- Do chroot in userspace
-- (Currently) buggy user permisions database(`perms.db` using `db(3)`)
-- X11 within MrChrootBSD easily with the `-X` option.
-- Use `gdb` to debug stuff within the MrChrootBSD(limited `ptrace` support)
-- **THIS IS MAINLY A HUMANS ATTEMPT TO LOOK AT FreeBSD INTERNALS(Educational)**
-
-## Non-Features
-  Some of these will be removed(added to features) in the future
-- jails
-- daemons
-
 ## Usage
 This is early in development so stay tuned,use it like a normal chroot. Feel free to probe around the source code and send patches to my github.
 
@@ -49,6 +29,26 @@ sysrc linux_enable=YES
 service linux start     #failed
 podman run --os=linux --volume /run/dbus:/run/dbus --security-opt apparmor=unconfined --cap-add=SYS_PTRACE -it ubuntu:latest /bin/bash
 ``` 
+
+# MrChrootBSD
+  This program is a chroot like utility for FreeBSD,which is by far the most sexy BSD available. I like [PRoot](https://proot-me.github.io/) for testing software(on linux) but I am anaware of such a tool for FreeBSD,so I was left in the dust. Meet `MrChrootBSD`,a **non-root version of chroot** sort of.
+
+# NOTICE
+
+  **This software is still in it's infancy and should not be used for anything serious other than like educational stuff.**
+
+## Features
+  Here is a list
+- Do chroot in userspace
+- (Currently) buggy user permisions database(`perms.db` using `db(3)`)
+- X11 within MrChrootBSD easily with the `-X` option.
+- Use `gdb` to debug stuff within the MrChrootBSD(limited `ptrace` support)
+- **THIS IS MAINLY A HUMANS ATTEMPT TO LOOK AT FreeBSD INTERNALS(Educational)**
+
+## Non-Features
+  Some of these will be removed(added to features) in the future
+- jails
+- daemons
 
 ### X11 within MrChrootBSD
 
