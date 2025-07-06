@@ -29,8 +29,8 @@ sysrc linux_enable=YES
 service linux start     #failed
 podman run --os=linux --volume /run/dbus:/run/dbus --security-opt apparmor=unconfined --cap-add=SYS_PTRACE -it ubuntu:latest /bin/bash
 
-pkg instal rpm2cpio
-
+pkg install linux_base-c7
+#Cannot install package: kernel missing 64-bit Linux support        failed
 curl -s https://raw.githubusercontent.com/apptainer/apptainer/main/tools/install-unprivileged.sh | bash -s - ./apptainer
 ``` 
 
